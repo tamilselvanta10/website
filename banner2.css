@@ -9,7 +9,7 @@ body {
     background-color: #f5f7fb;
 }
 
-/* Header */
+
 .header {
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@ body {
     background-color: #101828;
 }
 
-/* Logo */
+
 .logo {
     font-size: 25px;
     font-weight: bold;
@@ -30,7 +30,7 @@ body {
     color: #5eead4;
 }
 
-/* Navigation */
+
 .navbar {
     display: flex;
     gap: 30px;
@@ -51,7 +51,7 @@ body {
     color: #5eead4;
 }
 
-/* Button */
+
 .contact-btn {
     padding: 10px 20px;
     border: none;
@@ -102,7 +102,7 @@ body {
   inset: 0;
   background-image:
     linear-gradient(180deg, rgba(16,18,15,0.55) 0%, rgba(16,18,15,0.35) 45%, rgba(16,18,15,0.85) 100%),
-    url('https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1920&q=80');
+    url('https://images.unsplash.com/photo-1754039984985-ef607d80113a?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
   z-index: -2;
