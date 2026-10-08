@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <title> Project</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Web Project</h1>
+        <nav>
+            <ul>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#form">Contact Form</a></li>
+                <li><a href="#table">Data Table</a></li>
+                <li><a href="#list">Item List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="images">
+        <h2>Images</h2>
+        <img src="assets/images/minato.jpg" alt="Sample Image">
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <video controls>
+            <source src="assets/videos/sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form">
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="table">
+        <h2>Data Table</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="list">
+        <h2>Item List</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </section>
+
+    <footer>
+        <button onclick="alert('Button Clicked!')">Click Me!</button>
+    </footer>
+
+</body>
+</html>
