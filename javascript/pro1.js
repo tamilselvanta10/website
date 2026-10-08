@@ -1,153 +1,148 @@
 
-var name = "Tamilselvan";
-console.log(name);
+var name = "Tamilselvan T";
+console.log("Q1:", name);
 
-var age = 20;
-age = 40;
-console.log(age);
+var age = 25;
+age = 30;
+console.log("Q2:", age);
 
-var city = "salem";
+var city = "Chennai";
 city = "Bangalore";
-console.log(city);
+console.log("Q3:", city);
 
-var salary = 33000;
-var salary = 47000;
-console.log(salary);
+var salary = 25000;
+var salary = 35000;
+console.log("Q4:", salary);
 
 var value = 10;
 value = 20;
 var value = 30;
-console.log(value);
+console.log("Q5:", value);
 
-var department = "MCA";
-var department = "BCA";
-console.log(department);
+var department = "ECE";
+var department = "CSE";
+console.log("Q6:", department);
 
 var mark = 50;
 mark = 75;
-console.log(mark);
+console.log("Q7:", mark);
 
-var company = "Stackly";
-var company = "accenture";
-console.log(company);
+var company = "TCS";
+var company = "Infosys";
+console.log("Q8:", company);
 
 var course;
 course = "JavaScript";
-console.log(course);
+console.log("Q9:", course);
 
-var color = "Golden";
+var color = "Red";
 color = "Blue";
 color = "Green";
-color = "black";
-console.log(color);
+color = "Yellow";
+console.log("Q10:", color);
 
 
 let letAge = 25;
-console.log(letAge);
+console.log("Q11:", letAge);
 
-let letSalary = 33000;
-letSalary = 47000;
-console.log(letSalary);
+let letSalary = 30000;
+letSalary = 40000;
+console.log("Q12:", letSalary);
 
 let letName = "Tamilselvan";
 letName = "Naveen";
-console.log(letName);
+console.log("Q13:", letName);
 
-let letDepartment = "MCA";
-letDepartment = "BCA";
-console.log(letDepartment);
+let letDepartment = "ECE";
+letDepartment = "CSE";
+console.log("Q14:", letDepartment);
 
 let letMark = 60;
 letMark = 90;
-console.log(letMark);
+console.log("Q15:", letMark);
 
 let qualification;
 qualification = "MCA";
-console.log(qualification);
+console.log("Q16:", qualification);
 
 let testLet = "First";
-console.log(testLet);
+console.log("Q17:", testLet);
 
 let letCity = "Chennai";
 letCity = "Bangalore";
 letCity = "Coimbatore";
-console.log(letCity);
+console.log("Q18:", letCity);
 
 let studentName = "Tamilselvan";
 let studentAge = 25;
-let studentDepartment = "MCA";
+let studentDepartment = "CSE";
+console.log("Q19 Name:", studentName);
+console.log("Q19 Age:", studentAge);
+console.log("Q19 Department:", studentDepartment);
 
-console.log(studentName);
-console.log(studentAge);
-console.log(studentDepartment);
-
-let letCompany = "stackly";
-letCompany = "accenture";
-console.log(letCompany);
+let letCompany = "TCS";
+letCompany = "Infosys";
+console.log("Q20:", letCompany);
 
 
 const constAge = 25;
-console.log(constAge);
+console.log("Q21:", constAge);
 
 const constSalary = 50000;
-console.log(constSalary);
+console.log("Q22:", constSalary);
 
 const constCompany = "Stackly";
-console.log(constCompany);
+console.log("Q23:", constCompany);
 
 const fixedAge = 25;
-console.log(fixedAge);
+console.log("Q24:", fixedAge);
 
 const fixedCompany = "Stackly";
-console.log(fixedCompany);
+console.log("Q25:", fixedCompany);
 
 const college = "Jairam Arts and Science College";
-console.log(college);
+console.log("Q26:", college);
 
 const constName = "Tamilselvan";
 const constStudentAge = 25;
-const constDepartment = "MCA";
-
-console.log(constName);
-console.log(constStudentAge);
-console.log(constDepartment);
+const constDepartment = "CSE";
+console.log("Q27 Name:", constName);
+console.log("Q27 Age:", constStudentAge);
+console.log("Q27 Department:", constDepartment);
 
 var variableName = "Tamilselvan";
 let variableAge = 25;
 const variableCompany = "Stackly";
+console.log("Q28 Name:", variableName);
+console.log("Q28 Age:", variableAge);
+console.log("Q28 Company:", variableCompany);
 
-console.log(variableName);
-console.log(variableAge);
-console.log(variableCompany);
 
-
-console.log("Tamilselvan");
+console.log("Q29:", "Tamilselvan");
 
 let printAge = 25;
-console.log(printAge);
+console.log("Q30:", printAge);
 
-console.log(100);
+console.log("Q31:", 100);
 
 let printName = "Tamilselvan";
 let printCity = "Chennai";
 let printQualification = "MCA";
-
-console.log(printName);
-console.log(printCity);
-console.log(printQualification);
+console.log("Q32 Name:", printName);
+console.log("Q32 City:", printCity);
+console.log("Q32 Qualification:", printQualification);
 
 let message = "Hello JavaScript";
-console.log(message);
+console.log("Q33:", message);
 
 let number = 10;
-console.log(number);
-
+console.log("Q34 Before:", number);
 number = 20;
-console.log(number);
+console.log("Q34 After:", number);
 
-console.log("Tamilselvan");
-console.log(25);
-console.log("MCA");
+console.log("Q35 Name: Tamilselvan");
+console.log("Q35 Age: 25");
+console.log("Q35 Qualification: MCA");
 
 
 alert("Welcome to JavaScript");
@@ -166,36 +161,36 @@ alert(myQualification);
 
 
 let promptName = prompt("What is your name?");
-console.log(promptName);
+console.log("Q41:", promptName);
 
 let promptAge = prompt("How old are you?");
 alert(promptAge);
 
 let promptQualification = prompt("What is your qualification?");
-console.log(promptQualification);
+console.log("Q43:", promptQualification);
 
 let enteredName = prompt("What is your name?");
 alert(enteredName);
 
 let enteredAge = prompt("What is your age?");
-console.log(enteredAge);
+console.log("Q45:", enteredAge);
 
 
 let programmingResult = confirm("Do you know programming?");
-console.log(programmingResult);
+console.log("Q46:", programmingResult);
 
-let batchMessage = "Welcome to Batch 5";
+let batchMessage = "Welcome to Batch 41";
 document.writeln(batchMessage);
 
 let continueResult = confirm("Do you want to continue?");
-console.log(continueResult);
+console.log("Q48:", continueResult);
 
 
-console.log("This is a normal message.");
-console.warn("This is a warning message.");
-console.error("This is an error message.");
+console.log("Q49: This is a normal message.");
+console.warn("Q49: This is a warning message.");
+console.error("Q49: This is an error message.");
 
-console.log("Normal message");
-console.warn("Warning message");
-console.error("Error message");
+console.log("Q50: Normal message");
+console.warn("Q50: Warning message");
+console.error("Q50: Error message");
 console.clear();
