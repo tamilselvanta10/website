@@ -184,7 +184,7 @@ console.log(enteredAge);
 let programmingResult = confirm("Do you know programming?");
 console.log(programmingResult);
 
-let batchMessage = "Welcome to Batch 41";
+let batchMessage = "Welcome to Batch 5";
 document.writeln(batchMessage);
 
 let continueResult = confirm("Do you want to continue?");
