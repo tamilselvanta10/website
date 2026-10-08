@@ -81,8 +81,8 @@ console.log(studentName);
 console.log(studentAge);
 console.log(studentDepartment);
 
-let letCompany = "TCS";
-letCompany = "Infosys";
+let letCompany = "stackly";
+letCompany = "accenture";
 console.log(letCompany);
 
 
@@ -106,7 +106,7 @@ console.log(college);
 
 const constName = "Tamilselvan";
 const constStudentAge = 25;
-const constDepartment = "CSE";
+const constDepartment = "MCA";
 
 console.log(constName);
 console.log(constStudentAge);
