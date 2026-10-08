@@ -2,16 +2,16 @@
 var name = "Tamilselvan";
 console.log(name);
 
-var age = 25;
-age = 30;
+var age = 20;
+age = 40;
 console.log(age);
 
-var city = "Chennai";
+var city = "salem";
 city = "Bangalore";
 console.log(city);
 
-var salary = 25000;
-var salary = 35000;
+var salary = 33000;
+var salary = 47000;
 console.log(salary);
 
 var value = 10;
@@ -19,42 +19,42 @@ value = 20;
 var value = 30;
 console.log(value);
 
-var department = "ECE";
-var department = "CSE";
+var department = "MCA";
+var department = "BCA";
 console.log(department);
 
 var mark = 50;
 mark = 75;
 console.log(mark);
 
-var company = "TCS";
-var company = "Infosys";
+var company = "Stackly";
+var company = "accenture";
 console.log(company);
 
 var course;
 course = "JavaScript";
 console.log(course);
 
-var color = "Red";
+var color = "Golden";
 color = "Blue";
 color = "Green";
-color = "Yellow";
+color = "black";
 console.log(color);
 
 
 let letAge = 25;
 console.log(letAge);
 
-let letSalary = 30000;
-letSalary = 40000;
+let letSalary = 33000;
+letSalary = 47000;
 console.log(letSalary);
 
 let letName = "Tamilselvan";
 letName = "Naveen";
 console.log(letName);
 
-let letDepartment = "ECE";
-letDepartment = "CSE";
+let letDepartment = "MCA";
+letDepartment = "BCA";
 console.log(letDepartment);
 
 let letMark = 60;
@@ -75,7 +75,7 @@ console.log(letCity);
 
 let studentName = "Tamilselvan";
 let studentAge = 25;
-let studentDepartment = "CSE";
+let studentDepartment = "MCA";
 
 console.log(studentName);
 console.log(studentAge);
