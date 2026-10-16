@@ -26,9 +26,9 @@ console.log(c)
 
 
 
-var namee="Allwin Marshal J"
+var namee="Tamilselvan T"
 var age=22 
-var programming_knowledge="python"
+var programming_knowledge="Java"
 
 console.log(namee)
 console.log(age);
@@ -49,8 +49,8 @@ console.log(fruits[fruits.length-1])
 
 var marksheet={
 
-    name:"Allwin Marshal J",
-    Role:"Python Full Stack Developer",
+    name:"Tamilselvan T",
+    Role:"Full Stack Developer",
     GCPA:8.9 
 }
 
