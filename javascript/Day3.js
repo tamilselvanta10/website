@@ -1,209 +1,281 @@
-var a=10 
-console.log(a)
+var a = 10;
+a = 20;
+var a = 30;
+console.log(a);
 
-a=20 
-console.log(a)
+let b = 40;
+b = 50;
+console.log(b);
 
+const c = 60;
+console.log(c);
 
-var a=30 
-console.log(a)
+let myName = "Tamilselvan";
+let myAge = 25;
+let programmingKnowledge = true;
 
-let b=40 
-console.log(b)
+console.log(myName, typeof myName);
+console.log(myAge, typeof myAge);
+console.log(programmingKnowledge, typeof programmingKnowledge);
 
-b=50 
-console.log(b)
+let fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
 
+console.log(fruits);
+console.log(fruits[0]);
+console.log(fruits[fruits.length - 1]);
 
-// let b=60 Error: cannot redeclare
+let person = {
+    name: "Tamilselvan",
+    role: "Full Stack Developer",
+    cgpa: 8.5
+};
 
-const c=70 
-console.log(c)
+console.log(person.name);
+console.log(person.role);
+console.log(person.cgpa);
 
+let userName = prompt("Enter your name:");
+let userAge = prompt("Enter your age:");
 
-// c=80 Error: cannot reassign 
-// const c=90  Error: cannot redeclare 
+alert("Hello, " + userName + "!");
+console.log(userName);
+console.log(userAge);
 
+let num1 = 20;
+let num2 = 6;
 
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+console.log(num1 ** num2);
 
-var namee="Tamilselvan T"
-var age=22 
-var programming_knowledge="Java"
+let q7 = 5;
 
-console.log(namee)
-console.log(age);
-console.log(programming_knowledge);
+console.log(q7++);
+console.log(q7);
+console.log(++q7);
 
-console.log(typeof(namee));
-console.log(typeof(age));
-console.log(typeof(programming_knowledge));
+let q8a = 10;
+let q8b = q8a--;
+let q8c = --q8a;
 
+console.log(q8a);
+console.log(q8b);
+console.log(q8c);
 
+let assignment = 20;
 
-var fruits=["apple","pineapple","orange","pomegranate"]
+assignment += 5;
+console.log(assignment);
 
-console.log(fruits)
-console.log(fruits[0])
-console.log(fruits[fruits.length-1])
+assignment -= 3;
+console.log(assignment);
 
+assignment *= 2;
+console.log(assignment);
 
-var marksheet={
+assignment /= 4;
+console.log(assignment);
 
-    name:"Tamilselvan T",
-    Role:"Full Stack Developer",
-    GCPA:8.9 
+assignment %= 4;
+console.log(assignment);
+
+console.log(5 == "5");
+console.log(5 === "5");
+console.log(10 != "10");
+console.log(10 !== "10");
+
+let age = 25;
+let hasID = true;
+
+console.log(age >= 18 && hasID);
+console.log(age >= 18 || hasID);
+console.log(!hasID);
+
+let ternaryAge = Number(prompt("Enter your age:"));
+
+let ageMessage = ternaryAge >= 18
+    ? "You are eligible to vote."
+    : "You are not eligible to vote.";
+
+console.log(ageMessage);
+
+console.log(typeof ("hello" + 10));
+console.log(typeof (10 + true));
+console.log(typeof (10 + null));
+console.log(typeof ("hello" + undefined));
+
+let inputNumber = Number(prompt("Enter a number:"));
+
+console.log(inputNumber + 10);
+
+console.log(Boolean(""));
+console.log(Boolean("Hello"));
+console.log(Boolean(0));
+console.log(Boolean(true));
+
+let positiveNumber = Number(prompt("Enter a number:"));
+
+if (positiveNumber > 0) {
+    console.log("Positive number");
+} else {
+    console.log("Zero or negative number");
 }
 
-console.log(marksheet)
+let time = Number(prompt("Enter the hour (0 to 23):"));
 
-console.log(marksheet.name)
-console.log(marksheet.Role)
-console.log(marksheet.GCPA)
-
-
-
-// var username=prompt()
-// var age=prompt()
-
-// alert(username)
-// alert(age)
-
-
-
-var a=5
-var t=10 
-
-console.log(a+t)
-console.log(a-t)
-console.log(a*t)
-console.log(a/t)
-console.log(a%t)
-console.log(a**t)
-
-
-var a=5
-console.log(a++)
-console.log(a)
-console.log(++a);
-
-// Solution
-// 5
-// 6
-// 7
-
-var a=10
-var e=a--
-var f=--a
-
-console.log(a)
-console.log(e)
-console.log(f);
-
-// Solution
-// 8
-// 10
-// 8
-
-
-var a=5
-var z=10 
-
-console.log(a+=z)
-console.log(a-=z)
-console.log(a*=z)
-console.log(a/=z)
-console.log(a%=z)
-
-
-
-
-console.log(5=="5")
-// output: true 
-
-console.log(5==="5")
-//output: False
-
-console.log(10!=10)
-//output:false
-
-console.log(10!=="10")
-//output:Ture 
-
-
-var a=6
-
-if(a>0 && a<5){
-    console.log(true)
-}
-else{
-    console.log(false)
+if (time < 0 || time > 23 || !Number.isInteger(time)) {
+    console.log("Invalid time");
+} else if (time >= 4 && time < 6) {
+    console.log("Early morning");
+} else if (time >= 6 && time < 12) {
+    console.log("Morning");
+} else if (time >= 12 && time < 16) {
+    console.log("Afternoon");
+} else if (time >= 16 && time < 19) {
+    console.log("Evening");
+} else {
+    console.log("Night");
 }
 
+let eligibilityAge = Number(prompt("Enter your age:"));
+let height = Number(prompt("Enter your height in cm:"));
+let weight = Number(prompt("Enter your weight in kg:"));
 
-var a=7
-
-if(a>0 || a<5){
-    console.log(true)
-}
-else{
-    console.log(false)
-}
-
-var a=9
-
-if(a!=9){
-    console.log(true)
-}
-else{
-    console.log(false)
-}
-
-
-
-var age=2
-
-var result=age>=18? "eligible" : "not eligible"
-
-console.log(result)
-
-
-console.log(typeof ("hello" + 10))
-console.log(typeof (10 + true))
-console.log(typeof (10 + null))
-console.log(typeof ("hello" + undefined))
-
-// output
-// string
-// number
-// number
-// string
-
-
-var value=prompt("enter a number: ")
-var number=Number(value)
-console.log(number+10)
-
-
-
-console.log(Boolean(""))
-console.log(Boolean("Hello"))
-console.log(Boolean(0))
-console.log(Boolean(true))
-
-
-// output
-// false
-// true
-// false
-// true
-
-
-var a=55 
-
-if(a<0){
-    console.log("negative")
+if (eligibilityAge >= 18) {
+    if (height >= 150) {
+        if (weight >= 45) {
+            console.log("Eligible");
+        } else {
+            console.log("Not eligible: Weight is too low");
+        }
+    } else {
+        console.log("Not eligible: Height is too low");
+    }
+} else {
+    console.log("Not eligible: Age is below 18");
 }
 
-else{
-    console.log("positive")
+let trafficLight = prompt("Enter traffic light color:");
+
+switch (trafficLight.toLowerCase()) {
+    case "red":
+        console.log("Stop");
+        break;
+    case "yellow":
+        console.log("Get ready");
+        break;
+    case "green":
+        console.log("Go");
+        break;
+    default:
+        console.log("Invalid traffic light color");
 }
+
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
+
+for (let i = 2; i <= 20; i += 2) {
+    console.log(i);
+}
+
+let count = 10;
+
+while (count >= 1) {
+    console.log(count);
+    count--;
+}
+
+let doCount = 1;
+
+do {
+    console.log(doCount);
+    doCount++;
+} while (doCount <= 10);
+
+for (let character of "JavaScript") {
+    console.log(character);
+}
+
+let students = ["Priya", "Rahul", "Arun", "Divya", "Kumar"];
+
+for (let studentName of students) {
+    console.log(studentName);
+}
+
+let student = {
+    name: "Priya",
+    role: "Frontend Developer",
+    cgpa: 9
+};
+
+for (let key in student) {
+    console.log(key + ": " + student[key]);
+}
+
+let firstNumber = Number(prompt("Enter the first number:"));
+let secondNumber = Number(prompt("Enter the second number:"));
+
+console.log(firstNumber + secondNumber);
+console.log(firstNumber - secondNumber);
+console.log(firstNumber * secondNumber);
+
+if (secondNumber !== 0) {
+    console.log(firstNumber % secondNumber);
+} else {
+    console.log("Cannot divide by zero");
+}
+
+let numbers = [5, 12, 8, 20, 15];
+
+for (let number of numbers) {
+    if (number > 10) {
+        console.log(number);
+    }
+}
+
+let votingAge = Number(prompt("Enter your age:"));
+
+if (votingAge >= 18) {
+    alert("You are eligible to vote.");
+} else if (votingAge >= 0) {
+    alert("You are not eligible to vote.");
+} else {
+    alert("Please enter a valid age.");
+}
+
+let operation = prompt(
+    "Choose an operation: addition, subtraction, multiplication, division"
+);
+
+let calculatorNum1 = Number(prompt("Enter the first number:"));
+let calculatorNum2 = Number(prompt("Enter the second number:"));
+
+let result;
+
+switch (operation.toLowerCase()) {
+    case "addition":
+        result = calculatorNum1 + calculatorNum2;
+        break;
+    case "subtraction":
+        result = calculatorNum1 - calculatorNum2;
+        break;
+    case "multiplication":
+        result = calculatorNum1 * calculatorNum2;
+        break;
+    case "division":
+        if (calculatorNum2 !== 0) {
+            result = calculatorNum1 / calculatorNum2;
+        } else {
+            result = "Cannot divide by zero";
+        }
+        break;
+    default:
+        result = "Invalid operation";
+}
+
+console.log(result);
+alert("Calculator Result: " + result);
