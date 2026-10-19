@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Love Surprise 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  min-height: 100vh;
+  color: white;
+  background: radial-gradient(ellipse at center,
+    #48082e 0%, #210019 55%, #10000e 100%);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: 0.8; }
+  to { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(90%, 430px);
+  padding: 25px 0;
+}
+
+.card {
+  display: none;
+  background: rgba(255, 190, 225, 0.12);
+  border: 1px solid rgba(255, 120, 190, 0.5);
+  box-shadow: 0 0 35px rgba(255, 30, 145, 0.22);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 28px 22px;
+  animation: appear 0.7s ease;
+}
+
+.card.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1, h2 {
+  color: #ffacd9;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px #ff329d;
+}
+
+p {
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+button {
+  background: linear-gradient(135deg, #ff78bb, #ff248b);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  margin: 8px 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px #ff4aa9;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ff8bc7;
+  border-radius: 10px;
+  background: #fff0f8;
+  color: #570c38;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 180, 220, .4);
+}
+
+.option:hover { background: rgba(255, 100, 180, .3); }
+
+#countdown {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffb4dc;
+  letter-spacing: 2px;
+}
+
+.letter {
+  background: #fff0f7;
+  color: #79234e;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.small {
+  color: #ffc4e3;
+  font-size: 13px;
+}
+
+@media (max-width: 400px) {
+  .card { padding: 22px 16px; }
+  h1 { font-size: 26px; }
+  #countdown { font-size: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<main class="container">
+
+  <!-- Screen 1: Countdown -->
+  <section class="card active" id="screen1">
+    <h2>A Special Day Is Coming 💗</h2>
+    <p>Counting every second until your special moment...</p>
+    <div id="countdown">Loading...</div>
+    <p class="small">Made with love, just for you ✨</p>
+    <button onclick="showScreen(2)">Open Your Surprise 💌</button>
+  </section>
+
+  <!-- Screen 2: Birthday greeting -->
+  <section class="card" id="screen2">
+    <h1>Happy Birthday, Thangam! 🎂</h1>
+    <p>Today is not just another day.</p>
+    <p>Today is the day someone incredibly special came into this world. 💖</p>
+    <p>And I have a little surprise waiting for you...</p>
+    <button onclick="showScreen(3)">Continue 💗</button>
+  </section>
+
+  <!-- Screen 3: Love messages -->
+  <section class="card" id="screen3">
+    <h2>Reasons I Adore You 💕</h2>
+    <p>✨ Your smile brightens my darkest days.</p>
+    <p>💗 Your presence makes everything feel better.</p>
+    <p>🌹 You make ordinary moments unforgettable.</p>
+    <p>💞 You are special in ways words cannot explain.</p>
+    <button onclick="showScreen(4)">One More Thing 💌</button>
+  </section>
+
+  <!-- Screen 4: Love question -->
+  <section class="card" id="screen4">
+    <h1>Do You Love Me? 💘</h1>
+    <p>Be honest... my heart is waiting! 🥹</p>
+    <button onclick="loveAnswer(true)">Yes, Always 💖</button>
+    <button onclick="loveAnswer(false)">Let Me Think 😜</button>
+    <p id="loveResponse"></p>
+  </section>
+
+  <!-- Screen 5: Quiz -->
+  <section class="card" id="screen5">
+    <h2>A Little Love Quiz 💞</h2>
+    <p id="question">What makes our moments special?</p>
+    <div id="options"></div>
+    <p id="quizFeedback"></p>
+    <p class="small" id="quizProgress"></p>
+    <button id="nextQuestion" onclick="nextQuiz()" hidden>
+      Next Question ➜
+    </button>
+  </section>
+
+  <!-- Screen 6: Score -->
+  <section class="card" id="screen6">
+    <h1>Congratulations! 🎉</h1>
+    <p>You completed my little love quiz!</p>
+    <div style="font-size:55px">🥰💗🧸</div>
+    <h2 id="scoreText">Your Score: 0%</h2>
+    <p>No score can measure how special you are to me. ❤️</p>
+    <button onclick="showScreen(7)">Read Your Letter 💌</button>
+  </section>
+
+  <!-- Screen 7: Personal letter -->
+  <section class="card" id="screen7">
+    <h2>A Letter From My Heart 💌</h2>
+    <div class="letter" id="letterText"></div>
+    <button onclick="showScreen(1)">Replay Surprise ↻</button>
+  </section>
+
+</main>
+
+<script>
+// Customize these details
+const birthdayPerson = "JOE";
+const birthdayDate = "2026-10-19T00:00:00";
+const senderName = "Your Pannikutty 💌";
+
+const hearts = document.getElementById("hearts");
+
+for (let i = 0; i < 35; i++) {
+  const heart = document.createElement("span");
+  heart.className = "heart";
+  heart.textContent = ["💗", "💕", "💖", "♥"][i % 4];
+  heart.style.left = Math.random() * 100 + "%";
+  heart.style.animationDuration = (7 + Math.random() * 9) + "s";
+  heart.style.animationDelay = (Math.random() * 10) + "s";
+  heart.style.fontSize = (10 + Math.random() * 16) + "px";
+  hearts.appendChild(heart);
+}
+
+// Countdown timer
+function updateCountdown() {
+  const target = new Date(birthdayDate).getTime();
+  const now = Date.now();
+  const distance = target - now;
+  const el = document.getElementById("countdown");
+
+  if (Number.isNaN(target)) {
+    el.textContent = "Set the birthday date!";
+    return;
+  }
+
+  if (distance <= 0) {
+    el.textContent = "It's your special day! 🎂";
+    return;
+  }
+
+  const days = Math.floor(distance / 86400000);
+  const hours = Math.floor(distance / 3600000) % 24;
+  const mins = Math.floor(distance / 60000) % 60;
+  const secs = Math.floor(distance / 1000) % 60;
+
+  el.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Screen navigation
+function showScreen(number) {
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.remove("active");
+  });
+  document.getElementById("screen" + number).classList.add("active");
+}
+
+// Love question
+function loveAnswer(answer) {
+  const response = document.getElementById("loveResponse");
+
+  if (answer) {
+    response.textContent = "Awww! You just made my heart smile! 💖";
+    setTimeout(() => showScreen(5), 1500);
+  } else {
+    response.textContent = "I'll wait... but don't keep my heart waiting! 🥹💕";
+  }
+}
+
+// Quiz
+
+const quiz = [
+  {
+    q: "What makes our moments special?",
+    options: [
+      "Laughter together",
+      "Being ourselves",
+      "All of these"
+    ],
+    correct: 2
+  },
+  {
+    q: "What is the best birthday gift?",
+    options: [
+      "Love and care",
+      "A random object",
+      "Nothing at all"
+    ],
+    correct: 0
+  },
+  {
+    q: "What do I wish for you?",
+    options: [
+      "Happiness",
+      "Success",
+      "Both, always!"
+    ],
+    correct: 2
+  }
+];
+
+let questionIndex = 0;
+let score = 0;
+let answered = false;
+
+function renderQuiz() {
+  const item = quiz[questionIndex];
+
+  answered = false;
+
+  document.getElementById("question").textContent = item.q;
+  document.getElementById("quizFeedback").textContent = "";
+  document.getElementById("quizProgress").textContent =
+    `Question ${questionIndex + 1} of ${quiz.length}`;
+
+  const nextButton = document.getElementById("nextQuestion");
+  nextButton.hidden = true;
+
+  nextButton.textContent =
+    questionIndex === quiz.length - 1
+      ? "See Your Score 💗"
+      : "Next Question ➜";
+
+  const optionsContainer = document.getElementById("options");
+  optionsContainer.innerHTML = "";
+
+  item.options.forEach((option, index) => {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "option";
+    button.textContent = option;
+
+    button.addEventListener("click", function () {
+      selectAnswer(index);
+    });
+
+    optionsContainer.appendChild(button);
+  });
+}
+
+function selectAnswer(index) {
+  if (answered) return;
+
+  answered = true;
+
+  const item = quiz[questionIndex];
+  const isCorrect = index === item.correct;
+
+  if (isCorrect) {
+    score++;
+  }
+
+  document.getElementById("quizFeedback").textContent =
+    isCorrect
+      ? "Correct! You're amazing! 💖"
+      : "That's okay! Love is not a test. 💕";
+
+  document.querySelectorAll("#options .option").forEach(button => {
+    button.disabled = true;
+  });
+
+  document.getElementById("nextQuestion").hidden = false;
+}
+
+function nextQuiz() {
+  if (!answered) return;
+
+  if (questionIndex < quiz.length - 1) {
+    questionIndex++;
+    renderQuiz();
+  } else {
+    const percentage = Math.round(
+      (score / quiz.length) * 100
+    );
+
+    document.getElementById("scoreText").textContent =
+      `Your Score: ${percentage}% 💗`;
+
+    showScreen(6);
+  }
+}
+
+renderQuiz();
+
+
+// Personalized letter
+document.getElementById("letterText").textContent =
+`Dear ${birthdayPerson},
+
+Today is your special day, but honestly, every day feels special because you are in this world.
+
+I hope this birthday brings you happiness, beautiful memories, new opportunities, and countless reasons to smile.
+
+Never forget how valuable you are and how much you deserve all the wonderful things life has to offer.
+
+May your dreams come true, your heart stay happy, and your smile never fade.
+
+Happy Birthday, ${birthdayPerson}! ❤️
+
+With all my love,
+Tamilselvan 💌`;
+</script>
+
+</body>
+</html>
