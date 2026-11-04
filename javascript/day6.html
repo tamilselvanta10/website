@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="day6.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Management Dashboard</h1>
+        <p id="currentDate"></p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="totalEmployees"></p>
+            </div>
+            <div class="card">
+                <h3>Total Annual Salaries</h3>
+                <p id="totalSalary"></p>
+            </div>
+            <div class="card">
+                <h3>Salary ≥ ₹3 Lakh</h3>
+                <p id="eligibleEmployees"></p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button onclick="showAll()">All Employees</button>
+            <button onclick="showEligible()">Salary ≥ ₹3 Lakh</button>
+            <button onclick="sortSalary()">Sort by Salary</button>
+        </section>
+
+        <section>
+            <h2>Employee Details</h2>
+            <div id="employeeList" class="employees"></div>
+        </section>
+
+        <section class="date-tools">
+            <h2>Date Object Practice</h2>
+            <label for="yearInput">Change year:</label>
+            <input type="number" id="yearInput" value="2027">
+            <button onclick="changeYear()">Update Year</button>
+            <p id="updatedDate"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>JavaScript Practice Project</p>
+    </footer>
+
+    <script src="day6.js"></script>
+</body>
+</html>
+```

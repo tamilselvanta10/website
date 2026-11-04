@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f0;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 320px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f8a68, #2f5d45);
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.role {
+  color: #6b6b6b;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.bio {
+  color: #2f6b4f;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background-color: #e3efe6;
+  color: #2f6b4f;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.contact-btn {
+  background-color: #2f5d45;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #24462f;
+}
