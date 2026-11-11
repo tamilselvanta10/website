@@ -29,35 +29,49 @@
 // export default App;
 
 
-import React, { useState } from "react";
-import "./App.css";
-import StudentList from "./component/Listrender";
-import Login from "./component/Login";
-import Home from "./component/Home";
+// import React, { useState } from "react";
+// import "./App.css";
+// import StudentList from "./component/Listrender";
+// import Login from "./component/Login";
+// import Home from "./component/Home";
+
+// function App() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+//   const handleLogin = () => {
+//     setIsLoggedIn(true);
+//   };
+
+//   const handleLogout = () => {
+//     setIsLoggedIn(false);
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>React Task 3</h1>
+//       <h2>List Rendering & Conditional Rendering</h2>
+
+//       {isLoggedIn ? (
+//         <Home onLogout={handleLogout} />
+//       ) : (
+//         <Login onLogin={handleLogin} />
+//       )}
+
+//       <StudentList />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import React from "react";
+import Counter from "./component/Counter";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
   return (
-    <div className="App">
-      <h1>React Task 3</h1>
-      <h2>List Rendering & Conditional Rendering</h2>
-
-      {isLoggedIn ? (
-        <Home onLogout={handleLogout} />
-      ) : (
-        <Login onLogin={handleLogin} />
-      )}
-
-      <StudentList />
+    <div>
+      <Counter />
     </div>
   );
 }
