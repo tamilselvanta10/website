@@ -65,15 +65,32 @@
 // export default App;
 
 
+// import React from "react";
+// import Counter from "./component/Counter";
+
+// function App() {
+//   return (
+//     <div>
+//       <Counter />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
 import React from "react";
-import Counter from "./component/Counter";
+import RegistrationForm from "./component/RegistrationForm.jsx";
 
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <>
+      <RegistrationForm />
+    </>
   );
 }
 
 export default App;
+
+
+
