@@ -329,7 +329,7 @@ button:hover {
 } */
 
 /* ===== Design tokens ===== */
-:root {
+/* :root {
   --primary: #4f46e5;
   --primary-dark: #4338ca;
   --danger: #ef4444;
@@ -342,10 +342,10 @@ button:hover {
   --radius: 12px;
   --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.12);
-}
+} */
 
 /* ===== Reset & base ===== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -357,10 +357,10 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-}
+} */
 
 /* ===== Layout ===== */
-.App {
+/* .App {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 24px;
@@ -379,10 +379,10 @@ body {
   font-weight: 500;
   color: var(--muted);
   margin-bottom: 32px;
-}
+} */
 
 /* ===== Buttons ===== */
-button {
+/* button {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
@@ -406,11 +406,11 @@ button:active {
 button:focus-visible {
   outline: 3px solid rgba(79, 70, 229, 0.4);
   outline-offset: 2px;
-}
+} */
 
 /* ===== Login & Home cards ===== */
 
-  .login-container h1,
+  /* .login-container h1,
   .login-container h2,
   .login-container h3 {
     color: #4f46e5;
@@ -448,7 +448,7 @@ button:focus-visible {
 }
 
 /* ===== Form inputs ===== */
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"] {
   display: block;
@@ -473,10 +473,10 @@ input:focus {
 
 .login-container button {
   width: 100%;
-}
+} */ */
 
 /* ===== Student list ===== */
-.student-section h2 {
+/* .student-section h2 {
   margin: 32px 0 24px;
   color: var(--text);
 }
@@ -518,10 +518,10 @@ input:focus {
 .student-card p b {
   color: var(--text);
   margin-right: 4px;
-}
+} */
 
 /* ===== Responsive ===== */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .App {
     padding: 24px 16px;
   }
@@ -534,5 +534,10 @@ input:focus {
   .home-container {
     padding: 24px;
   }
-}
+} */
 
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

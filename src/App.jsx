@@ -79,18 +79,35 @@
 // export default App;
 
 
+// import React from "react";
+// import RegistrationForm from "./component/RegistrationForm.jsx";
+
+// function App() {
+//   return (
+//     <>
+//       <RegistrationForm />
+//     </>
+//   );
+// }
+
+// export default App;
+
+
 import React from "react";
-import RegistrationForm from "./component/RegistrationForm.jsx";
+import UserDetails from "./component/UserDashboard.jsx";
 
 function App() {
+
   return (
-    <>
-      <RegistrationForm />
-    </>
+    <div>
+      <UserDetails />
+    </div>
   );
+
 }
 
 export default App;
+
 
 
 
